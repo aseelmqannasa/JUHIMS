@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="JUHIMSemployee.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/mutual/uni_logo.png" />
+    <title><%: Page.Title %> | HIMS </title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <link href="~/mutual/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+                <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+    <script src="~/mutual/javascript.js"></script>
+</head>
+<body>
+    <form runat="server">
+    <header>
+                   <asp:LoginView runat="server" ViewStateMode="Disabled" ID="LoginMode">
+                   <AnonymousTemplate>
+                       <div class="w3-top">
+                           <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                               <a href="Login.aspx" class="w3-bar-item w3-button"><b>
+                                   <img alt="logo" src="mutual/uni_logo.png" class="ujlogo" width="35px" height="40px" /></b> Health Insurance</a>
+                           </div>
+                       </div>
+                   </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <div class="w3-top">
+                            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+                            <b><img alt="logo" src="mutual/uni_logo.png" class="ujlogo" width="35px" height="40px"/></b> Health Insurance</a>
+                            <div class="w3-right w3-hide-small">
+                                <a href="Requests.aspx" class="w3-bar-item w3-button">Recent Requests</a>
+                                <a href="DoneRequests.aspx" class="w3-bar-item w3-button">Done Requests</a>
+                                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                            </div></div></div>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+    </header>
+    <div id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+    </form>
+</body>
+</html>
+

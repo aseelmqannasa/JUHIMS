@@ -1,0 +1,50 @@
+﻿.ebutton
+{
+    border: none;
+    padding: 10px 24px;
+    background-color: #424645;
+    color:white;
+    text-align: center;
+    font-size: 12px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.ebutton:hover {
+  background-color: rgb(212, 212, 212);
+  color: black;
+}
+
+.gv
+{
+    margin-left: 410px;
+    width: 600px;
+}
+
+.gvbuttons
+{
+    margin-left: 300px;
+    margin-bottom: 15px;
+}
+
+#StatusMessage
+{
+    margin-left: 617px;
+}
+ #sendbtn
+ {
+     margin-left: 652px;
+ }
+
+ #label1
+ {
+     margin-left: 630px;
+ }
+
+ .gvbutton
+ {
+     margin-top: 10px;
+     margin-left:650px ; 
+ }
